@@ -2,14 +2,14 @@ const generateMangerCard = function (manager) {
     return `
     <div class = 'col-4 mt-4'>
         <div class = 'card h-100'>
-            <div class = 'card-header'>
+            <div class = 'card-header text-white bg-danger'>
                 <h3>${manager.name}</h3>
                 <h4>Manager</h4><i class = 'material-icons'>content_paste</i>
             </div>
 
-            <div class = 'card-body'>
-                <p class = 'id'>ID:  <a href="mailto:${manager.email}">${manager.id}</a></p>
-                <p class = 'email'>Email:  ${manager.email}</p>
+            <div class = 'card-body text-dark'>
+            <p class = 'id'>ID:  ${manager.id}</a></p>
+            <p class = 'email'>Email:  <a href="mailto:${manager.email}">${manager.email}</a></p>
                 <p class = 'officeNumber'>Office Number:  ${manager.officeNumber}</p>
             </div>
 
@@ -22,12 +22,12 @@ const generateEngineerCard = function (engineer) {
     return `
     <div class = 'col-4 mt-4'>
         <div class = 'card h-100'>
-            <div class = 'card-header'>
+            <div class = 'card-header text-white bg-danger'>
                 <h3>${engineer.name}</h3>
                 <h4>Engineer</h4><i class = 'material-icons'>laptop_mac</i>
             </div>
             
-            <div class = 'card-body'>
+            <div class = 'card-body text-dark'>
                 <p class = 'id'>ID:  ${engineer.id}</p>
                 <p class = 'email'>Email:   <a href="mailto:${engineer.email}">${engineer.email}</a></p>
                 <p class = 'github'>Github:  <a href="https://github.com/${engineer.github}">${engineer.github}</a></p>
@@ -42,12 +42,12 @@ const generateInternCard = function (intern) {
     return `
     <div class='col-4 mt-4'>
         <div class='card h-100'>
-            <div class='card-header'>
+            <div class='card-header bg-danger text-white'>
                 <h3>${intern.name}</h3>
                 <h4>Intern</h4><i class='material-icons'>assignment_ind</i>
             </div>
 
-            <div class='card-body'>
+            <div class='card-body text-dark'>
                 <p class='id'>ID:  ${intern.id}</p>
                 <p class='email'>Email:  <a href="mailto:${intern.email}">${intern.email}</a></p>
                 <p class = 'school'>School:  ${intern.school}</p>
@@ -92,7 +92,7 @@ generateHTML = (data) => {
 }
 
 const generateTeamPage = function (employeeCards) {
-    retrun`
+    return `
 <!DOCTYPE html>
 <html lang="en">
 

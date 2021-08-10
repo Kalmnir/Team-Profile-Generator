@@ -27,11 +27,11 @@ const addManager = () => {
         },
         {
             type: 'input',
-            message: "Please enter the manager's ID number.",
+            message: "What is the team manager's ID number?",
             name: 'id',
             validate: userInput => {
                 if (isNaN(userInput)) {
-                    console.log("Please input the manger's ID number!")
+                    console.log("Please enter the manger's ID number!")
                     return false;
                 } else {
                     return true;
@@ -40,9 +40,9 @@ const addManager = () => {
         },
         {
             type: 'input',
-            message: "Please input the manager's email adress.",
+            message: "What is the the team manager's email adress?",
             name: 'email',
-            validate: userInput => {
+            validate: email => {
                 valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
                 if (valid) {
                     return true;
@@ -54,7 +54,7 @@ const addManager = () => {
         },
         {
             type: 'input',
-            message: "Please input the manager's office number.",
+            message: "What is the team manager's office number?",
             name: 'officeNumber',
             validate: userInput => {
                 if (isNaN(userInput)) {
@@ -96,7 +96,7 @@ const addEmployee = () => {
                 if (userInput) {
                     return true
                 } else {
-                    console.log("Please input your team member's name!")
+                    console.log("Please enter your team member's name!")
                     return false;
                 }
             }
@@ -107,7 +107,7 @@ const addEmployee = () => {
             name: 'id',
             validate: userInput => {
                 if (isNaN(userInput)) {
-                    console.log("Please input your team member's employee ID number!")
+                    console.log("Please enter your team member's employee ID number!")
                     return false;
                 } else {
                     return true;
@@ -118,12 +118,12 @@ const addEmployee = () => {
             type: 'input',
             message: "What is your team member's email adress?",
             name: 'email',
-            validate: userInput => {
+            validate: email => {
                 valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
                 if (valid) {
                     return true;
                 } else {
-                    console.log("Please input a valid email adress!")
+                    console.log("Please enter a valid email adress!")
                     return false;
                 }
             }
@@ -137,7 +137,7 @@ const addEmployee = () => {
                 if (userInput) {
                     return true;
                 } else {
-                    console.log("Please input your engineer's github username!")
+                    console.log("Please enter your engineer's github username!")
                     return false;
                 }
             }
@@ -151,7 +151,7 @@ const addEmployee = () => {
                 if (userInput) {
                     return true;
                 } else {
-                    console.log("Please input the name of your intern's school!")
+                    console.log("Please enter the name of your intern's school!")
                     return false;
                 }
             }
@@ -193,3 +193,15 @@ const writeFile = data => {
         }
     })
 };
+
+addManager()
+    .then(addEmployee)
+    .then(teamArray => {
+        return generateHTML(teamArray);
+    })
+    .then(pageHTML => {
+        return writeFile(pageHTML);
+    })
+    .catch(err => {
+        console.error(err);
+    });
