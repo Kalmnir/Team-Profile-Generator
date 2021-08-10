@@ -182,3 +182,14 @@ const addEmployee = () => {
             }
         })
 };
+
+const writeFile = data => {
+    fs.writeFile('./dist/index.html', data, err => {
+        if (err) {
+            console.error(err);
+            return;
+        } else {
+            console.log("Your team's profile has been successfully generated!  You can find it in the 'dist' folder.")
+        }
+    })
+};
