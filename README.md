@@ -29,7 +29,7 @@
   To use this project, simply open the index in vs codes integrated terminal and type 'node index.js' and then answer the given questions!
   
 ## Test
-  In order to run tests on this project in order to check everything runs properly, open the package.json in the integrated terminal of vs code and type in 'npm test', to test specific class functionality type 'npm test (name of test.test.js)'
+  In order to run tests on this, open the package.json in the integrated terminal of vs code and type in 'npm test', to test specific class functionality type 'npm test (name of test.test.js)'
   
 ## Contribution
   To contribute to this project, N/A
