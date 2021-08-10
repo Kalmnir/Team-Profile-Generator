@@ -11,7 +11,7 @@ describe('Employee', () => {
 });
 
 describe('getName', () => {
-    it('Should get the name of the employee', () => {
+    it('Should return a string that is the name of the employee', () => {
         const employee = new Employee('john', 12, 'johndoe@email.com')
 
         expect(employee.getName()).toEqual(expect.any(String));
@@ -19,21 +19,21 @@ describe('getName', () => {
 });
 
 describe('getId', () => {
-    it('Should get the ID number from the employee', () => {
+    it('Should return a number that is the ID of the employee', () => {
         const employee = new Employee('john', 12, 'johndoe@email.com')
 
         expect(employee.getId()).toEqual(expect.any(Number));
     })
 });
 describe('getEmail', () => {
-    it('Should get the email adress of the employee', () => {
+    it('Should return a string that is the email adress of the employee', () => {
         const employee = new Employee('john', 12, 'johndoe@email.com')
 
         expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()));
     })
 });
 describe('getRole', () => {
-    it('Should get the role of the employee', () => {
+    it('Should return a role of Employee', () => {
         const employee = new Employee('john', 12, 'johndoe@email.com')
 
         expect(employee.getRole()).toEqual('Employee');

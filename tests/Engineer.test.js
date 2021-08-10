@@ -9,7 +9,7 @@ describe('Engineer', () => {
 });
 
 describe('getGithub', () => {
-    it('Should get the github username.', () => {
+    it('Should return a string of the engineers github username .', () => {
         const engineer = new Engineer('John', 20, 'johndoe@email.com', 'johndoe');
 
         expect(engineer.getGithub()).toEqual(expect.stringContaining(engineer.github.toString()));
@@ -17,7 +17,7 @@ describe('getGithub', () => {
 });
 
 describe('getRole', () => {
-    it('Should get the role of the engineer', () => {
+    it('Should return a role of engineer', () => {
         const engineer = new Engineer('John', 20, 'johndoe@email.com', 'johndoe');
 
         expect(engineer.getRole()).toEqual('Engineer');
