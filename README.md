@@ -30,6 +30,8 @@
   
 ## Test
   In order to run tests on this, open the package.json in the integrated terminal of vs code and type in 'npm test', to test specific class functionality type 'npm test (name of test.test.js)'
+
+  example of the profile generator in action can be found here:  [YouTube](https://youtu.be/Y3qgpcT79L4)
   
 ## Contribution
   To contribute to this project, N/A
@@ -43,5 +45,3 @@
   GitHub: https://github.com/Kalmnir
   
 Email: jmsackett91@gmail.com
-
-
